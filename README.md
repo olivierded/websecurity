@@ -43,6 +43,7 @@ Pour lancer les deux versions *attaque* et *contremesure* il faut php d'installÃ
 
 On build puis run une image Ã  partir des Dockerfiles.
 
+__PS :  Dans les deux cas il faut que le repertoire courant soit "/attaque" ou "/contremesure"__
 
 ```
 docker build -t attaque .
@@ -51,7 +52,6 @@ docker run -p 8080:80 -e HOST_DB=172.17.0.2 --name attaque attaque
 
 HOST_DB est l'adresse IP de MYSQL. __Cette variable est indispensable.__
 
-PS :  Dans les deux cas il faut que le repertoire courant soit "/attaque" ou "/contremesure"
 
 Le test se fait dans un navigateur. Si 172.17.0.3 est l'adresse IP du conteneur (docker inspect pour le trouver), l'url de test est : http:172.17.0.2/
 
