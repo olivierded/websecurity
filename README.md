@@ -30,7 +30,7 @@ Elle permet de créer un compte, de se connecter et une fois connecté, on peut 
 La base de donnée utilisée est MySQL. Pour nos tests nous avons utilisé l'image Docker mysql qu'on lance avec la lignes lignes de commande suivantes :
 
  ``` 
-   docker run --name mysql_secu -d -e MYSQL_ROOT_PASSWORD=rootroot -e MYSQL_DATABASE=bdsecu mysql
+   docker run --name mysql_secu -d -e MYSQL_ROOT_PASSWORD=rootroot -e MYSQL_DATABASE=bdsecu mysql:5.7
    mysql -h 172.17.0.2 -u root -prootroot < bdsecu-2.sql
  ````
 
