@@ -1,10 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.9.1
--- https://www.phpmyadmin.net/
---
--- Hôte : localhost
--- Généré le :  Dim 29 mars 2020 à 18:51
--- Version du serveur :  8.0.18
+-- Version du serveur :  5.7
 -- Version de PHP :  7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -33,14 +27,15 @@ CREATE TABLE `personne` (
   `nom` varchar(200) NOT NULL,
   `prenom` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
-  `pwd` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `pwd` varchar(200) CHARACTER SET utf8mb4 NOT NULL -- COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;-- COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `personne`
 --
 
-INSERT INTO `personne` (`id`, `nom`, `prenom`, `email`, `pwd`) VALUES
+
+INSERT INTO personne(id, nom, prenom, email, pwd) VALUES
 (1, 'azito', 'palasse', 'azitop@gmail.com', 'killing'),
 (2, 'gerard', 'fillo', 'fifigerard@yahoo.fr', 'rootroot'),
 (3, 'jean', 'joues', 'jeanjores@gmail.com', 'rootroot');

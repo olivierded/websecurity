@@ -12,7 +12,7 @@ if(isset($_POST['send'])){
     else{
 
         try {
-            $connexion = new  PDO("mysql:host=localhost;dbname=bdsecu", "root", "rootroot");
+            $connexion = new  PDO("mysql:host=".getenv(HOST_DB).";dbname=bdsecu", "root", "rootroot");
             $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch (PDOException  $e) {
 			echo("Erreur  connexion :" . $e->getMessage());
@@ -30,25 +30,6 @@ if(isset($_POST['send'])){
         else{
             ?><script>alert('utilisateur non trouvé!')</script><?php
             }
-        //var_dump($line);
-        // echo $line;
-
-        /*
-        $bd = $connexion->query("select * FROM personne ");
-        $i = 0;
-        while($line = $bd->fetch()){
-            if($line['email']== $email and $line['pwd'] == $pwd){
-               $i++; 
-            }
-        }
-        
-        if($i == 1){
-            header('location:listePersonne.php');
-        }
-        else{
-            ?><script>alert('utilisateur non trouvé!')</script><?php
-            }
-        */
     }
 }
 

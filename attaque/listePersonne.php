@@ -6,7 +6,7 @@ if(isset($_SESSION['login'])){session_destroy(); }
 
 
 
-try  {  $connexion=  new  PDO( "mysql:host=localhost;dbname=bdsecu;charset=utf8","root","rootroot");
+try  {  $connexion = new  PDO("mysql:host=".getenv(HOST_DB).";dbname=bdsecu", "root", "rootroot");
 }
 catch  (PDOException  $e)
 {
