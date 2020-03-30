@@ -13,6 +13,14 @@ Attaque XSS persistante (insertion en dure dans la bd d'une ligne de code qui s'
 
 Contre mesure: sanitisation des entrées pour les deux types d'attaques
 
+## Structure du projet
+
+Le projet contient deux sous-projet *attaque* et *contremesure*.
+Ces deux sous projets sont chacun dans un dossier et ils représentent, respectivement, la version vulnérable et la version sécurisée de l'application.
+
+Que fait l'application ?
+
+Elle permet de créer un compte, de se connecter et une fois connecté, on peut voir la liste de tous les comptes qui ont été créés.
 
 
 ## Tester
