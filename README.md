@@ -31,7 +31,7 @@ La base de donnée utilisée est MySQL. Pour nos tests nous avons utilisé l'ima
 
  ``` 
    docker run --name mysql_secu -d -e MYSQL_ROOT_PASSWORD=rootroot -e MYSQL_DATABASE=bdsecu mysql:5.7
-   mysql -h 172.17.0.2 -u root -prootroot < bdsecu-2.sql
+   mysql -h 172.17.0.2 -u root -prootroot bdsecu < bdsecu-2.sql
  ````
 
 PS: 172.17.0.2  est l'adresse IP du conteneur mysql_secu. Pour le trouver : docker inspect mysql_secu
