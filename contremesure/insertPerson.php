@@ -36,7 +36,7 @@ if(isset($_POST['envoyer'])) {
 	else {
 
 		try {
-			$connexion = new  PDO("mysql:host=localhost;dbname=bdsecu", "root", "rootroot");
+			$connexion = new  PDO("mysql:host=".getenv(HOST_DB).";dbname=bdsecu", "root", "rootroot");
 		} catch (PDOException  $e) {
 			echo("Erreur  connexion :" . $e->getMessage());
 			exit();
