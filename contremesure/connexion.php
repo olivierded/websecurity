@@ -47,8 +47,9 @@ if(isset($_POST['send'])){
         $email1 =$_POST['email'];
         $pwd1= $_POST['password'];
 
-        $bd = $connexion->query("select * FROM personne where email = '".$email1."' and pwd = '".$pwd1."'");//"'or 1=1;#
-        $line = $bd->fetch();
+        $stmt = $connexion->prepare("select * FROM personne where email = ? and pwd = ? ");
+        $stmt->execute(array($email1, $pwd1));
+        $line = $stmt->fetch();
         if($line){
             header('location:listePersonne.php');
         }
