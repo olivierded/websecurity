@@ -1,18 +1,22 @@
 from flask import Flask, url_for, json, request
-from pyDes import des
+# from pyDes import des
 import os
-import md5hash
-import pyDes
+# import md5hash
+import md5
+# import pyDes
 import hashlib
 
 app= Flask(__name__)
-RANDOM_KEY= hashlib.new("085ZMVsBnTYu060K7gfJpGXeik5VZamC").digest()
+RANDOM_KEY= md5.new("085ZMVsBnTYu060K7gfJpGXeik5VZamC").digest()
+
+# RANDOM_KEY= hashlib.new("ripemd160").digest()
 SECURE_DIRECTORY = '/tmp'
 
 def secure_store(filename, suffix, data):
     IV= b"\0\0\0\0\0\0\0\0"
-    d = des(RANDOM_KEY[0:8], pyDes.ECB, IV, pad=None, padmode=pyDes.PAD_PKCS5)
+    # d = des(RANDOM_KEY[0:8], pyDes.ECB, IV, pad=None, padmode=pyDes.PAD_PKCS5)
     f = open(SECURE_DIRECTORY + '/' + filename + '-' + suffix, 'w')
+    # f.write(d.encrypt(bytes(data)))
     f.write(d.encrypt(bytes(data)))
     f.close()
     return 'data stored'
