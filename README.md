@@ -60,7 +60,7 @@ Le test se fait dans un navigateur. Si 172.17.0.3 est l'adresse IP du conteneur 
 
 Une page qui ressemble à ça va s'afficher :
 
-![](se_connecter.png)
+![](images/se_connecter.png)
 
 - Pour l'injection SQL :
 
@@ -70,10 +70,10 @@ Si on met dans le champ *email* la valeur ``` //"'or 1=1;# ``` et n'importe quel
 
 Il faut d'abord cliquer sur *inscrivez-vous!* puis créer un compte avec un nom qui est en fait un script JS.
 
-![](enregistrez.png)
+![](images/enregistrez.png)
 
 Une fois l'utilisateur enregistré, on fait retour pour se connecter, soit avec un vrai compte soit par injection SQL et on pourra voir le resultat de l'execution du script qui a été injecté dans la base de donnée.
 
-![](popup_attaque.png)
+![](images/popup_attaque.png)
 
 __IMPORTANT : Si on utilise la même base de donnée, il faut la vider lorsqu'on veut tester la version *contremesure* après testé la version *attaque*. Vu que le script de l'injection XSS est enregistrée dans la base de donnée.__
