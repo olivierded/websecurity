@@ -77,3 +77,6 @@ Une fois l'utilisateur enregistré, on fait retour pour se connecter, soit avec 
 ![](images/popup_attaque.png)
 
 __IMPORTANT : Si on utilise la même base de donnée, il faut la vider lorsqu'on veut tester la version *contremesure* après testé la version *attaque*. Vu que le script de l'injection XSS est enregistrée dans la base de donnée.__
+
+
+__Auteurs__: Olivier DEDOCOTON & Malick TUO
